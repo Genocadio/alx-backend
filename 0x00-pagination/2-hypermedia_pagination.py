@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import csv
 import math
-from typing import List, Tuple, Dict
+from typing import List, Dict
 index_range = __import__('0-simple_helper_function').index_range
 
 
