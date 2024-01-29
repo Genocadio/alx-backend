@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 import csv
 import math
-from typing import List, Tuple
+from typing import List, Tuple, Dict
+
 index_range = __import__('0-simple_helper_function').index_range
 
 
@@ -26,14 +27,14 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """ Get page from csv data """
-        assert type(page) == int and type(page_size) == int
+        assert int == type(page) and type(page_size) == int
         assert page > 0 and page_size > 0
         start, end = index_range(page, page_size)
         return self.dataset()[start:end]
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> List[List]:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> dict[str, int | None | list[list]]:
         """ Get hyperlinks """
-        assert type(page) == int and type(page_size) == int
+        assert int == type(page) and type(page_size) == int
         assert page > 0 and page_size > 0
         total_pages = math.ceil(len(self.dataset()) / page_size)
         return {
