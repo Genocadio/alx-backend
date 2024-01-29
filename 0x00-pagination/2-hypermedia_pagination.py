@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 import csv
 import math
-from typing import List, Tuple, Dict
-
+from typing import List, Tuple
 index_range = __import__('0-simple_helper_function').index_range
 
 
@@ -32,7 +31,7 @@ class Server:
         start, end = index_range(page, page_size)
         return self.dataset()[start:end]
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> dict[str, int | None | list[list]]:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> List[List]:
         """ Get hyperlinks """
         assert int == type(page) and type(page_size) == int
         assert page > 0 and page_size > 0
