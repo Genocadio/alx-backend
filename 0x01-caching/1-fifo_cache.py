@@ -1,9 +1,11 @@
 #!/user/bin/env python3
-''' FIFO caching '''
+'''
+FIFO caching
+'''
 Basecaching = __import__('base_caching').BaseCaching
 
 
-class FIFOcache(Basecaching):
+class FIFOCache(Basecaching):
     """ FIFO cache system """
 
     def __init__(self):
