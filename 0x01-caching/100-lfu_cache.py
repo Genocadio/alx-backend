@@ -12,6 +12,7 @@ class LFUCache(Basecaching):
         """ Initiliaze """
         super().__init__()
         self.lfu = []
+        super.MAX_ITEMS = 10
 
     def put(self, key, item):
         """ Add an item in the cache """
